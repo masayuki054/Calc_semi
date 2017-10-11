@@ -5,13 +5,9 @@
 #+title: 微分ゼミ
 #+author: suzuki@iwate-u.ac.jp
 
-# #+HTML_HEAD: <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
-
-# #+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"
 
 #+title: 1回目 (2017.10.12)
 #+OPTIONS: tex:t \n:t
-# #+HTML_MATHJAX:  path:"https://cdn.mathjax.org/mathjax/latest/MathJax.js"
 #+BEGIN_SRC elisp :exports none
 (setq org-startup-with-inline-images t)
 #+END_SRC

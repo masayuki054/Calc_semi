@@ -3,7 +3,4 @@
 #+PROPERTY:  header-args :padline no
 #+title: 微分ゼミ
 #+author: suzuki@iwate-u.ac.jp
-
-#+HTML_HEAD: <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
-
-# #+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"
+#+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"
