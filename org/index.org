@@ -1,0 +1,32 @@
+#+include: info/common-header.org
+#+title: 微分ゼミ
+
+#+BEGIN_SRC elisp :exports none
+(setq org-startup-with-inline-images t)
+#+END_SRC
+
+* 内容(予定)
+
+** [[calc_semi_1.org][微分の意味]] (2017.10.12)
+
+   - \( dy = f'(x) dx \) 
+
+   - \( dz = f_x(x,y) dx + f_y(x, y) dy \)
+
+** 関数の値と微分
+
+*** 平均値の定理，意味と利用
+
+*** テイラーの定理，意味と利用
+
+*** マクローリン展開の計算
+    - \(f^(n)\) の計算
+
+** いろいろな微分の計算
+
+*** 逆関数
+    
+*** 合成関数
+
+*** 対数微分法
+
