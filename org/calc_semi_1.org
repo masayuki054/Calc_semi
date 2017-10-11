@@ -1,6 +1,17 @@
-#+include: info/common-header.org
+# #+include: info/common-header.org
+#+OPTIONS:   H:6 toc:nil num:nil
+#+OPTIONS: ^:{}
+#+PROPERTY:  header-args :padline no
+#+title: 微分ゼミ
+#+author: suzuki@iwate-u.ac.jp
+
+# #+HTML_HEAD: <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+# #+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"
+
 #+title: 1回目 (2017.10.12)
-#+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"
+#+OPTIONS: tex:t \n:t
+# #+HTML_MATHJAX:  path:"https://cdn.mathjax.org/mathjax/latest/MathJax.js"
 #+BEGIN_SRC elisp :exports none
 (setq org-startup-with-inline-images t)
 #+END_SRC
@@ -27,6 +38,7 @@
 
 1. 曲線 \(f_1\) と 曲線 \(f_2\) の式
 
+   本質は，1変数の関数に
 
 2. 曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量
    \(\Delta_{2}\) を表わす式。
@@ -35,6 +47,7 @@
     
 3. 関数 \(z = f(x,y) \)の PR での変化量 \(\Delta{z}\) 
 
+   グラフを展開してみると？
 
 4. 極限を取ることで全微分の式を説明してください。
 
