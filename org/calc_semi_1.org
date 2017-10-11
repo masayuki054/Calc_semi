@@ -1,6 +1,6 @@
 #+include: info/common-header.org
 #+title: 1回目 (2017.10.12)
-
+#+HTML_MATHJAX:  path:"http://cdn.mathjax.org/mathjax/latest/MathJax.js"
 #+BEGIN_SRC elisp :exports none
 (setq org-startup-with-inline-images t)
 #+END_SRC
