@@ -5,12 +5,10 @@ EXCLUDES = [
 ]
 
 ORGS = [
-  "index-expanded.org", 
   "index.org", 
-  "lects.org", 
-  "memos.org", 
-  "org-docs.org", 
-  "supplement.org"
+  "Rakefile.org",
+  "calc.org",
+  "calc_semi_1.org"
 ]
 
 SUBDIRS = [
