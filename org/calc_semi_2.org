@@ -1,0 +1,122 @@
+# #+include: info/common-header.org
+#+OPTIONS:   H:6 toc:nil num:nil
+#+OPTIONS: ^:{}
+#+PROPERTY:  header-args :padline no
+#+title: 微分ゼミ
+#+author: suzuki@iwate-u.ac.jp
+
+
+#+title: 2回目 (2017.10.19)
+#+OPTIONS: tex:t \n:t
+#+BEGIN_SRC elisp :exports none
+(setq org-startup-with-inline-images t)
+#+END_SRC
+
+
+** 微分とは
+
+*** 前回のまとめ
+
+**** 関数の変化と微分 (1変数関数)
+
+下図を用いて，関数 \(y = f(x) \)の PQ での平均変化率，Pでの微分係数，Pで
+の接線の関係を説明してください。
+
+図には，説明に必要な適切な用語や記号や図を書き加えてください。
+
+#+ATTR_HTML: :controls controls :width 500
+[[file:./Figs/diff_semi_01.png]] 
+
+- \(\Delta y = f(x+\Delta x) - f(x)\)
+  \\
+- 平均変化率 = \( \frac{\Delta y}{\Delta x} \)
+  \\
+- \(f'(x) = \lim_{\Delta x \rightarrow 0}{\frac{\Delta y}{\Delta x}}\)
+  \\
+  - Pでの微分係数の定義
+    \\
+    - 極限値が存在して，一意に決まること => 微分可能
+      \\
+  - Pでの接線の傾きと一致
+    \\
+
+- \(\lim_{\Delta x \rightarrow 0} \{ \Delta y(x) = f(x+\Delta  x) -  f(x) \} \)
+  \\
+  - => \(dy = f'(x) dx\)
+
+**** 2変数関数の変化と微分
+
+下図を用いて，下記のことを説明してください。
+
+図には，説明に必要な適切な用語や記号や図を書き加えてください。
+
+#+ATTR_HTML: :controls controls :width 500
+[[file:./Figs/diff_semi_02.png]]
+
+ 1. 曲線 \(f_1\) と 曲線 \(f_2\) の式
+    \\
+    本質は，1変数の関数に
+    \\
+   - \(z = f_1(x) = \{f(x,y_0), y=y0 \} \) (平面の交わり)
+     \\
+   - \(z = f_2(y) = \{f(x_0+\Delta{x},y), x=x0+\Delta{x}\} \) (平面と
+     の交わり)
+     \\
+2. 曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量\(\Delta_{2}\) を表わす式。
+   \\
+   - \(\Delta_{1} = f(x_0+\Delta{x},y_0) - f(x_0,y_0) \)
+     \\
+   - \(\Delta_{2} = f(x_0+\Delta{x},y_0+\Delta{y}) - f(x_0+\Delta{x},y_0) \)
+     \\
+   偏微分係数との関係は？
+   \\
+   - \(\lim_{\Delta{x} \rightarrow 0}_{\Delta{y} \rightarrow 0} \Delta{1} = f_y(x_0,y_0)dx \)
+     \\
+   - \(\lim_{\Delta{x} \rightarrow 0}_{\Delta{y} \rightarrow 0} \Delta{2} = f_y(x_0,y_0)dy \)
+     \\
+3. 関数 \(z = f(x,y) \)の PR での変化量 \(\Delta{z}\) 
+
+   グラフを展開してみると？ 
+   \\
+   \(\Delta{z} = \Delta_{1} + \Delta_{2} \)
+
+4. 極限を取ることで全微分の式を説明してください。
+
+   \(\lim_{\Delta x \rightarrow 0}_{\Delta{y} \rightarrow 0} \{\Delta{z} = \Delta_{1} +
+   \Delta_{2}\} \) => \(dz = f_x(x_0, y_0)dx + f_y(x_0, y_0)dy\)
+   \\
+      - 接平面 \(z -z_0 = f_x(x_0, y_0)x + f_y(x_0, y_0)y\)上の微小変化を表す
+	\\  
+      - 微小変化の方向は無数にあり，下記ベクトルで表わされる
+	\\
+        \(\vec{dz} = f_x(x_0, y_0)\vec{dx} + f_y(x_0, y_0)\vec{dy}\)
+
+    　
+*** 10/19 の課題
+
+**** 平均値の定理
+
+下図を用いて，1変数関数の平均値の定理を説明してください。
+
+図には，説明に必要な適切な用語や記号や図を書き加えてく
+ださい。
+
+#+ATTR_HTML: :controls controls :width 500
+[[file:./Figs/diff_semi_03.png]]
+
+平均値の定理は，何を意味していて，何故重要なのかを考えてください。
+
+**** 平均値の定理の使い道
+
+- 関数 \(y = f(x) = \sqrt{x}\) を考えます。
+  \\
+
+- 平均値の定理と\( f(9) = 3 \) であることを用いて，
+  \\
+
+- \( f(10) = \sqrt{10} \) の近似値を求めてみてください。
+  \\
+
+- ヒント :: 平均値の定理から，
+  \\	    
+  \( f(10) = f(9) + f'(9 + \theta \times(10-9)) \times (10-9)\)，\(0<=\theta<=1\) が成り立ちます.

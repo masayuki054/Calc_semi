@@ -23,7 +23,8 @@
 図には，説明に必要な適切な用語や記号や図を書き加えてください。
 
 #+ATTR_HTML: :controls controls :width 500
-[[file:./Figs/diff_semi_01.jpg]] 
+#+ATTR_ORG: :width 500
+[[file:./Figs/diff_semi_01.png]] 
 
 
 **** 2変数関数の変化と微分
@@ -48,6 +49,7 @@
 4. 極限を取ることで全微分の式を説明してください。
     　
 #+ATTR_HTML: :controls controls :width 500
+#+ATTR_ORG:  :controls controls :width 500
 [[file:./Figs/diff_semi_02.jpg]]
 
 
