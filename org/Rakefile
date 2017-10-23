@@ -75,6 +75,7 @@ def deploy(file, dir)
 
 end
 
+
 rule ".html" => ".org" do |t|
   sh "~/COMM/bin/org2html #{t.prerequisites.join(' ')}"
   deploy(t.name, "#{SITE}/#{DIR}")
@@ -85,6 +86,12 @@ task :default => [:org2html]
 task :org2html => HTMLS do
   puts "git push"
   sh "git push"
+end
+
+task :deploy => HTMLS do |t|
+  (t.prerequisites).each do |h|
+    deploy(h, "#{SITE}/#{DIR}")
+  end
 end
 
 task :subdirs do
