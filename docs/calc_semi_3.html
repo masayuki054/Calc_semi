@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>微分ゼミ 2回目 (2017.10.19)</title>
-<!-- 2017-10-23 月 09:37 -->
+<title>微分ゼミ 3回目 (2017.10.26)</title>
+<!-- 2017-10-23 月 09:36 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="suzuki@iwate-u.ac.jp" />
@@ -179,25 +179,65 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">微分ゼミ 2回目 (2017.10.19)</h1>
+<h1 class="title">微分ゼミ 3回目 (2017.10.26)</h1>
 <div id="outline-container-sec-1" class="outline-2">
 <h2 id="sec-1">微分とは</h2>
 <div class="outline-text-2" id="text-1">
 </div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">前回のまとめ</h3>
+<h3 id="sec-1-1">前回の質問</h3>
 <div class="outline-text-3" id="text-1-1">
-</div><div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">関数の変化と微分 (1変数関数)</h4>
-<div class="outline-text-4" id="text-1-1-1">
 <p>
-下図を用いて，関数 \(y = f(x) \)の PQ での平均変化率，Pでの微分係数，Pで<br  />
-の接線の関係を説明してください。<br  />
+下記のような質問がありました。<br  />
+</p>
+
+<ul class="org-ul">
+<li>\(dx\)って何ですか？<br  />
+</li>
+
+<li>偏微分って何ですか？<br  />
+</li>
+
+<li>平均値の定理は，何を意味していて，何故重要なのですか？<br  />
+</li>
+
+<li>全微分は何を求めているのですか？<br  />
+</li>
+
+<li>曲線 \(f_1\) の求め方<br  />
+</li>
+</ul>
+
+<p>
+自分は理解できているか，確認してみてください。<br  />
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">前回のまとめのまとめ</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+今回は，ベクトルを使って微分の本質を説明してみます。<br  />
 </p>
 
 <p>
-図には，説明に必要な適切な用語や記号や図を書き加えてください。<br  />
+以下，\(\vec{e_x}\), \(\vec{e_y}\), \(\vec{e_x}\) は \(x\)と\(y\)と \(z\)方向の単位ベクトルとします。<br  />
 </p>
 
+<p>
+\(\Delta x\), \(\Delta y\), \(\Delta z\) は \(x\)と\(y\)と\(z\)方向の変化量とします。<br  />
+</p>
+
+<p>
+\(dx\)，\(dy\)， \(dz\) は，\(dx = \lim_{\Delta x \rightarrow 0}
+    \Delta x \), \(dy = \lim_{\Delta y\rightarrow 0} \Delta y \), \(dz
+    = \lim_{\Delta z \rightarrow 0} \Delta z \) で定められる0に近づいていく微小変化量を表わします。<br  />
+</p>
+</div>
+
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">関数の変化と微分 (1変数関数)</h4>
+<div class="outline-text-4" id="text-1-2-1">
 
 <div class="figure">
 <p><img src="./Figs/diff_semi_01.png" alt="diff_semi_01.png" controls="controls" width="500" /> <br  />
@@ -205,51 +245,53 @@ for the JavaScript code in this tag.
 </div>
 
 <ul class="org-ul">
-<li>\(\Delta y = f(x+\Delta x) - f(x)\)<br  />
-  <br  />
-</li>
-<li>平均変化率 = \( \frac{\Delta y}{\Delta x} \)<br  />
-  <br  />
-</li>
-<li>\(f'(x) = \lim_{\Delta x \rightarrow 0}{\frac{\Delta y}{\Delta x}}\)<br  />
-  <br  />
-<ul class="org-ul">
-<li>Pでの微分係数の定義<br  />
-<br  />
-<ul class="org-ul">
-<li>極限値が存在して，一意に決まること =&gt; 微分可能<br  />
-<br  />
-</li>
-</ul>
-</li>
-<li>Pでの接線の傾きと一致<br  />
-<br  />
-</li>
-</ul>
+<li>ベクトル \(\vec{PQ}\) を考えます。<br  />
+\(\vec{PQ}\) は下記のように表わせます:<br  />
+
+\begin{eqnarray}
+\vec{PQ} &=& \Delta x \vec{e_x} + \Delta y \vec{e_y} \\
+& = &  \Delta x\, \vec{e_x} + ({f(x_0+\Delta x) -  f(x_0)}) \vec{e_y} \\
+& = &  \Delta x\, \vec{e_x} + (\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}){\Delta x}   \vec{e_y}
+\end{eqnarray}
+
+<p>
+途中，変化量(\(f(x_0+\Delta x) - f(x_0)\))  を <br  />
+  平均変化率 (\(\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}\)) と変位\((\Delta  x)\) の積で表わしています。<br  />
+</p>
 </li>
 
-<li>\(\lim_{\Delta x \rightarrow 0} \{ \Delta y(x) = f(x+\Delta  x) -  f(x) \} \)<br  />
-  <br  />
-<ul class="org-ul">
-<li>=&gt; \(dy = f'(x) dx\)<br  />
+<li>\(P\rightarrow Q\) の極限を考えると以下になります:<br  />
+
+ \begin{eqnarray}
+ \lim_{Q \rightarrow P} \vec{PQ} & = & 
+ \lim_{\Delta x \rightarrow 0} \left(\Delta x \vec{e_x} + \Delta y \vec{e_y}\right) \\
+& = & \lim_{\Delta x \rightarrow 0}\left(\Delta_x \vec{e_x} + (f(x_0+\Delta x) -  f(x_0))\vec{e_y} \right)\\
+ & = & \lim_{\Delta x \rightarrow 0}\left(\Delta_x \vec{e_x} + \frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x} {\Delta x}\,\vec{e_y} \right)\\
+  & = & dx \, \vec{e_x} + f'(x) dx \vec{e_y}\\
+ & = & dx \, \vec{e_x} + dy \vec{e_y}\\
+ \end{eqnarray}
 </li>
-</ul>
+
+<li>\(\lim_{Q\rightarrow P}\vec{PQ}\) の \(\vec{e_y}\)成分に注目すると<br  />
+<br  />
+\( dy = f'(x_0) dx \) が導かれます。<br  />
+</li>
+
+<li>つまり，\( dx \) も \( dy \) も 0 に近づいていきますが，<br  />
+<br  />
+\(y = f(x) \)という関係があるため，<br  />
+<br  />
+点P\((x_0，y_0)\)において，\( dy \) は \( dx \) に比べて，<br  />
+\(f'(x_0)\) 倍で 0 に近づいていくことになります。<br  />
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2">2変数関数の変化と微分</h4>
-<div class="outline-text-4" id="text-1-1-2">
-<p>
-下図を用いて，下記のことを説明してください。<br  />
-</p>
 
-<p>
-図には，説明に必要な適切な用語や記号や図を書き加えてください。<br  />
-</p>
-
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">2変数関数の変化と微分</h4>
+<div class="outline-text-4" id="text-1-2-2">
 
 <div class="figure">
 <p><img src="./Figs/diff_semi_02.png" alt="diff_semi_02.png" controls="controls" width="500" /><br  />
@@ -257,20 +299,6 @@ for the JavaScript code in this tag.
 </div>
 
 <ol class="org-ol">
-<li>曲線 \(f_1\) と 曲線 \(f_2\) の式<br  />
-<br  />
-本質は，1変数の関数に<br  />
-<br  />
-<ul class="org-ul">
-<li>\(z = f_1(x) = \{f(x,y_0), y=y0 \} \) (平面の交わり)<br  />
-<br  />
-</li>
-<li>\(z = f_2(y) = \{f(x_0+\Delta{x},y), x=x0+\Delta{x}\} \) (平面と<br  />
-の交わり)<br  />
-<br  />
-</li>
-</ul>
-</li>
 <li>曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量\(\Delta_{2}\) を表わす式。<br  />
 <br  />
 <ul class="org-ul">
@@ -282,99 +310,75 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 <p>
-偏微分係数との関係は？<br  />
+極限を取ると偏微分係数になります:<br  />
 <br  />
 </p>
 <ul class="org-ul">
-<li>\(\lim_{\Delta{x} \rightarrow 0, \Delta{y} \rightarrow 0} \Delta{1} = f_y(x_0,y_0)dx \)<br  />
+<li>\(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{1} = f_y(x_0,y_0)dx \)<br  />
      <br  />
 </li>
-<li>\(\lim_{\Delta{x} \rightarrow 0, {\Delta{y} \rightarrow 0} \Delta{2} = f_y(x_0,y_0)dy \)<br  />
+<li>\(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{2} = f_y(x_0,y_0)dy \)<br  />
      <br  />
 </li>
 </ul>
 </li>
-<li>関数 \(z = f(x,y) \)の PR での変化量 \(\Delta{z}\) <br  />
+
+<li>ベクトル \(\vec{PR}\) を考えます。<br  />
 
 <p>
-グラフを展開してみると？<br  />
-<br  />
-\(\Delta{z} = \Delta_{1} + \Delta_{2} \)<br  />
+\(z = f(x, y)\) という関係があるので， \(x\) と \(y\) は独立に動け<br  />
+ますが，\(z=z(x,y)\)です。<br  />
 </p>
-</li>
-
-<li>極限を取ることで全微分の式を説明してください。<br  />
 
 <p>
-\(\lim_{\Delta x \rightarrow 0, \Delta{y} \rightarrow 0} \{\Delta{z} = \Delta_{1} +
-   \Delta_{2}\} \) =&gt; \(dz = f_x(x_0, y_0)dx + f_y(x_0, y_0)dy\)<br  />
-<br  />
-</p>
-<ul class="org-ul">
-<li>接平面 \(z -z_0 = f_x(x_0, y_0)x + f_y(x_0, y_0)y\)上の微小変化を表す<br  />
-<br  />
-</li>
-<li>微小変化の方向は無数にあり，下記ベクトルで表わされる<br  />
-<br  />
-\( \vec{dz} = dx \vec{x} + dy \vec{y} +  dz \vec{z} \)<br  />
-<br  />
-\(f_x(x_0, y_0)\vec{dx} + f_y(x_0, y_0)\vec{dy}\)<br  />
-</li>
-</ul>
-<p>
-　<br  />
+\(\vec{PR}\) は下記のように表わせます:<br  />
 </p>
 </li>
 </ol>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">10/19 の課題</h3>
-<div class="outline-text-3" id="text-1-2">
-</div><div id="outline-container-sec-1-2-1" class="outline-4">
-<h4 id="sec-1-2-1">平均値の定理</h4>
-<div class="outline-text-4" id="text-1-2-1">
-<p>
-下図を用いて，1変数関数の平均値の定理を説明してください。<br  />
-</p>
 
-<p>
-図には，説明に必要な適切な用語や記号や図を書き加えてく<br  />
-ださい。<br  />
-</p>
-
-
-<div class="figure">
-<p><img src="./Figs/diff_semi_03.png" alt="diff_semi_03.png" controls="controls" width="500" /><br  />
-</p>
+\begin{eqnarray}
+\lim_{R \rightarrow P }{\vec{PR}} &=& dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z} \\
+  & = &  dx \vec{e_x} + dy \vec{e_y} + (f_x(x_0, y_0) dx+ f_y(x_0,
+  y_0){dy})\vec{e_z} \\
+  & = &  (dx \vec{e_x} + f_x(x_0, y_0) dx \vec{e_z}) \\
+  &   & + (dy \vec{e_y} + f_y(x_0, y_0)dy) \,\vec{e_z}
+\end{eqnarray}
 </div>
-
-<p>
-平均値の定理は，何を意味していて，何故重要なのかを考えてください。<br  />
-</p>
 </div>
 </div>
 
-<div id="outline-container-sec-1-2-2" class="outline-4">
-<h4 id="sec-1-2-2">平均値の定理の使い道</h4>
-<div class="outline-text-4" id="text-1-2-2">
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">10/26 の課題</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">平均値の定理からテイラーの定理へ</h4>
+<div class="outline-text-4" id="text-1-3-1">
 <ul class="org-ul">
-<li>関数 \(y = f(x) = \sqrt{x}\) を考えます。<br  />
+<li>平均値の定理は<br  />
 <br  />
+\(f(b) = f(a) + f'(a+\theta_1 h) h\), \(h=(b-a)\), \( 0<\theta_1<1 \)<br  />
+<br  />
+<ul class="org-ul">
+<li>点 a から h だけ離れた点 b での \(f(b) \) を求める式と考えます。<br  />
 </li>
 
-<li>平均値の定理と\( f(9) = 3 \) であることを用いて，<br  />
-<br  />
+<li>\(f(x)\) の導関数と，\(f(a)\) と， \(f'(a+\theta_1 h)\) が分れば，<br  />
+\(f(b)\) が求められます。<br  />
+</li>
+</ul>
 </li>
 
-<li>\( f(10) = \sqrt{10} \) の近似値を求めてみてください。<br  />
-<br  />
-</li>
+<li>しかし，\(\theta_1\) が求められないので，\(f'(a)\)から近似値を求めてみましょう。<br  />
 
-<li id="ヒント">平均値の定理から，<br  />
-<br  />
-\( f(10) = f(9) + f'(9 + \theta \times(10-9)) \times (10-9)\)，\(0<=\theta<=1\) が成り立ちます.<br  />
+<ul class="org-ul">
+<li>\(f'(a+\theta_1 h)\)に，平均値の定理を適用し，\(f'(a)\)を使って，<br  />
+
+<p>
+\(f'(a+\theta_1 h) = f'(a) + \cdots\) <br  />
+</p>
+</li>
+</ul>
 </li>
 </ul>
 </div>
@@ -384,7 +388,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: suzuki@iwate-u.ac.jp</p>
-<p class="date">Created: 2017-10-23 月 09:37</p>
+<p class="date">Created: 2017-10-23 月 09:36</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
