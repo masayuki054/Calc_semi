@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>微分ゼミ 3回目 (2017.10.26)</title>
+<!-- 2017-10-23 月 21:17 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="suzuki@iwate-u.ac.jp" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">微分ゼミ 3回目 (2017.10.26)</h1>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 微分とは</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 前回の質問</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+下記のような質問がありました。
+</p>
+
+<ul class="org-ul">
+<li>\(dx\)って何ですか？
+</li>
+
+<li>偏微分って何ですか？
+</li>
+
+<li>平均値の定理は，何を意味していて，何故重要なのですか？
+</li>
+
+<li>全微分は何を求めているのですか？
+</li>
+
+<li>曲線 \(f_1\) の求め方
+</li>
+</ul>
+
+<p>
+自分は理解できているか，確認してみてください。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 前回のまとめのまとめ</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+今回は，ベクトルを使って微分の本質を説明してみます。
+</p>
+
+<p>
+以下，\(\vec{e_x}\), \(\vec{e_y}\), \(\vec{e_x}\) は \(x\)と\(y\)と \(z\)方向の単位ベクトルとします。
+</p>
+
+<p>
+\(\Delta x\), \(\Delta y\), \(\Delta z\) は \(x\)と\(y\)と\(z\)方向の変化量とします。
+</p>
+
+<p>
+\(dx\)，\(dy\)， \(dz\) は，\(dx = \lim_{\Delta x \rightarrow 0}
+    \Delta x \), \(dy = \lim_{\Delta y\rightarrow 0} \Delta y \), \(dz
+    = \lim_{\Delta z \rightarrow 0} \Delta z \) で定められる0に近づいていく微小変化量を表わします。
+</p>
+</div>
+
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> 関数の変化と微分 (1変数関数)</h4>
+<div class="outline-text-4" id="text-1-2-1">
+
+<div class="figure">
+<p><img src="./Figs/diff_semi_01.png" alt="diff_semi_01.png" controls="controls" width="500" /> 
+</p>
+</div>
+
+<ul class="org-ul">
+<li>ベクトル \(\vec{PQ}\) を考えます。
+\(\vec{PQ}\) は下記のように表わせます:
+
+\begin{eqnarray}
+\vec{PQ} &=& \Delta x \vec{e_x} + \Delta y \vec{e_y} \\
+& = &  \Delta x\, \vec{e_x} + ({f(x_0+\Delta x) -  f(x_0)}) \vec{e_y} \\
+& = &  \Delta x\, \vec{e_x} + (\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}){\Delta x}   \vec{e_y}
+\end{eqnarray}
+
+<p>
+途中，変化量(\(f(x_0+\Delta x) - f(x_0)\))  を <br  />
+  平均変化率 (\(\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}\)) と変位\((\Delta  x)\) の積で表わしています。
+</p>
+</li>
+
+<li>\(P\rightarrow Q\) の極限を考えると以下になります:
+
+ \begin{eqnarray}
+ \lim_{Q \rightarrow P} \vec{PQ} & = & 
+ \lim_{\Delta x \rightarrow 0} \left(\Delta x \vec{e_x} + \Delta y \vec{e_y}\right) \\
+& = & \lim_{\Delta x \rightarrow 0}\left(\Delta_x \vec{e_x} + (f(x_0+\Delta x) -  f(x_0))\vec{e_y} \right)\\
+ & = & \lim_{\Delta x \rightarrow 0}\left(\Delta_x \vec{e_x} + \frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x} {\Delta x}\,\vec{e_y} \right)\\
+  & = & dx \, \vec{e_x} + f'(x) dx \vec{e_y}\\
+ & = & dx \, \vec{e_x} + dy \vec{e_y}\\
+ \end{eqnarray}
+</li>
+
+<li>\(\lim_{Q\rightarrow P}\vec{PQ}\) の \(\vec{e_y}\)成分に注目すると
+\\
+\( dy = f'(x_0) dx \) が導かれます。
+</li>
+
+<li>つまり，\( dx \) も \( dy \) も 0 に近づいていきますが，
+\\
+\(y = f(x) \)という関係があるため，
+\\
+点P\((x_0，y_0)\)において，\( dy \) は \( dx \) に比べて，
+\(f'(x_0)\) 倍で 0 に近づいていくことになります。
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> 2変数関数の変化と微分</h4>
+<div class="outline-text-4" id="text-1-2-2">
+
+<div class="figure">
+<p><img src="./Figs/diff_semi_02.png" alt="diff_semi_02.png" controls="controls" width="500" />
+</p>
+</div>
+
+<ol class="org-ol">
+<li>曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量\(\Delta_{2}\) を表わす式。
+\\
+<ul class="org-ul">
+<li>\(\Delta_{1} = f(x_0+\Delta{x},y_0) - f(x_0,y_0) \)
+     \\
+</li>
+<li>\(\Delta_{2} = f(x_0+\Delta{x},y_0+\Delta{y}) - f(x_0+\Delta{x},y_0) \)
+     \\
+</li>
+</ul>
+<p>
+極限を取ると偏微分係数になります:
+\\
+</p>
+<ul class="org-ul">
+<li>\(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{1} = f_y(x_0,y_0)dx \)
+     \\
+</li>
+<li>\(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{2} = f_y(x_0,y_0)dy \)
+     \\
+</li>
+</ul>
+</li>
+
+<li>ベクトル \(\vec{PR}\) を考えます。
+
+<p>
+\(z = f(x, y)\) という関係があるので， \(x\) と \(y\) は独立に動け
+ますが，\(z=z(x,y)\)です。
+</p>
+
+<p>
+\(\vec{PR}\) は下記のように表わせます:
+</p>
+</li>
+</ol>
+
+\begin{eqnarray}
+\lim_{R \rightarrow P }{\vec{PR}} &=& dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z} \\
+  & = &  dx \vec{e_x} + dy \vec{e_y} + (f_x(x_0, y_0) dx+ f_y(x_0,
+  y_0){dy})\vec{e_z} \\
+  & = &  (dx \vec{e_x} + f_x(x_0, y_0) dx \vec{e_z}) \\
+  &   & + (dy \vec{e_y} + f_y(x_0, y_0)dy) \,\vec{e_z}
+\end{eqnarray}
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 平均値の定理からテイラーの定理へ</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 平均値の定理の意味</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+\([a, b]\) で微分可能な関数 \(f(x)\) に対する，平均値の定理は次のように
+解釈できると考えます。
+</p>
+
+<p>
+自分で納得できるか考え，納得できれば自分の言葉でまとめてください.
+</p>
+
+
+
+<ol class="org-ol">
+<li>区間 \([a,b]\) の間に，接線の傾きが平均変化率となる点 c が存在する。<br  />
+
+<p>
+\begin{eqnarray}
+  f(b) - f(a) &amp; = &amp; f'(c)\,(b-a), &amp; a&lt; c &lt;b <br  />
+   \end{eqnarray}<br  />
+</p>
+
+<ul class="org-ul">
+<li>上式の\(b\rightarrow a\)の極限が，\(dy=f'(x)dx\)となる。
+\\
+</li>
+<li>両辺を \((b-a)\)で割り，\(b\rightarrow a\)の極限が，\(dy/dx = f'(x) \)となる。
+\\
+</li>
+</ul>
+</li>
+
+<li>\(f(a)\)の値から，\(f(b)\)の値を正確に計算できる。<br  />
+
+\begin{eqnarray}
+ f(b) &=& f(a) + f'(c)\,(b-a), & a< c < b \\
+\end{eqnarray}
+
+<p>
+但し，\(c\)の値がわからないと\(f(b)\)の値は正確に求められないが，
+\\
+近似を用いながら，だんだんに \(f(b)\)を求めていくことができる。
+\(\sqrt{10}\)の計算や次節のやり方などがその例。
+\\
+</p>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 平均値の定理を繰り返す</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+\(h = b -a\) とし，\(c\) の代わりに，\(c = a + \theta_1 h\) と書き変
+え，平均値の定理を下記のように書く。繰り返すごとに新しい\(\theta\)
+がでてくるので，添字を付ける。
+</p>
+
+\begin{eqnarray}
+     f(b) &=& f(a) + f'(a+\theta_1 h) h, & 0<\theta_1<1 \\
+          & & & h=(b-a)
+\end{eqnarray}
+
+<ul class="org-ul">
+<li>上式を，\(a\) から \(h\) だけ離れた \(b\) での \(f(b) \) を求める式と考える。
+\\
+</li>
+<li>\(f(x)\) の導関数と，\(f(a)\) と， \(f'(a+\theta_1 h)\) が分れば，\(f(b)\) が求められる。
+\\
+</li>
+<li>しかし，\(\theta_1\)が分らないため，\(f'(a+\theta_1 h)\) が求められない。
+\\
+</li>
+</ul>
+
+<p>
+そこで，\(f'(a+\theta_1 h)\)に，平均値の定理を適用し，\(f'(a)\)を使って，
+表してみよう。
+</p>
+
+<p>
+次の式 (の\(\cdots\)の部分) を自分で導いてみてください。
+</p>
+
+\begin{eqnarray}
+  f'(a+\theta_1 h) & = & f'(a) + \cdots
+\end{eqnarray}
+
+
+
+<p>
+\(f^{(2)}(a+\theta_1\theta_2 h)\) についても，平均値の定理を適用し，
+\(f^{(2)}(a)\)を使って，計算式を導いてみよう。
+</p>
+
+
+
+<p>
+\(f^{(n)}(a+\theta_1\theta_2\cdots\theta_{n} h)\) についても，平均値の定理を適用し，
+\(f^{(n)}(a)\)を使って，計算式を導いてみよう。
+</p>
+
+
+<p>
+結局，\(f(b)\) の計算式はどうなる？
+\\
+テイラーの定理みたいのが導けましたか？
+\\
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: suzuki@iwate-u.ac.jp</p>
+<p class="date">Created: 2017-10-23 月 21:17</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

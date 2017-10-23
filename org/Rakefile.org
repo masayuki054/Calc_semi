@@ -46,7 +46,7 @@ ORGS.each do |org|
   @depends = `~/COMM/bin/org_dependency.rb #{org}`.chomp.gsub(' ','').split(",")
   if @depends.size!=0 
     file html => @depends.push(org) do |t|
-      sh "org2html #{org}"
+      sh "~/COMM/bin/org2html #{org}"
       deploy(t.name, "#{SITE}/#{DIR}")
     end
   end
@@ -79,7 +79,7 @@ def deploy(file, dir)
 end
 
 rule ".html" => ".org" do |t|
-  sh "~/bin/org2html #{t.prerequisites.join(' ')}"
+  sh "~/COMM/bin/org2html #{t.prerequisites.join(' ')}"
   deploy(t.name, "#{SITE}/#{DIR}")
 end
 
@@ -88,6 +88,12 @@ task :default => [:org2html]
 task :org2html => HTMLS do
   puts "git push"
   sh "git push"
+end
+
+task :deploy => HTMLS do |t|
+  (t.prerequisites).each do |h|
+    deploy(h, "#{SITE}/#{DIR}")
+  end
 end
 
 task :subdirs do
