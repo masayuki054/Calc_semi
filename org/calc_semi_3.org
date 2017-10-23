@@ -1,0 +1,146 @@
+# #+include: info/common-header.org
+#+OPTIONS:   H:6 toc:nil num:nil
+#+OPTIONS: ^:{}
+#+PROPERTY:  header-args :padline no
+#+title: 微分ゼミ
+#+author: suzuki@iwate-u.ac.jp
+
+#+title: 3回目 (2017.10.26)
+#+OPTIONS: tex:t \n:t
+#+BEGIN_SRC elisp :exports none
+(setq org-startup-with-inline-images t)
+#+END_SRC
+
+** 微分とは
+
+*** 前回の質問
+
+    下記のような質問がありました。
+
+    - \(dx\)って何ですか？
+
+    - 偏微分って何ですか？
+
+    - 平均値の定理は，何を意味していて，何故重要なのですか？
+
+    - 全微分は何を求めているのですか？
+
+    - 曲線 \(f_1\) の求め方
+
+    自分は理解できているか，確認してみてください。
+
+*** 前回のまとめのまとめ
+
+    今回は，ベクトルを使って微分の本質を説明してみます。
+
+    以下，\(\vec{e_x}\), \(\vec{e_y}\), \(\vec{e_x}\) は \(x\)と\(y\)と \(z\)方向の単位ベクトルとします。
+
+    \(\Delta x\), \(\Delta y\), \(\Delta z\) は \(x\)と\(y\)と\(z\)方向の変化量とします。
+
+    \(dx\)，\(dy\)， \(dz\) は，\(dx = \lim_{\Delta x \rightarrow 0}
+    \Delta x \), \(dy = \lim_{\Delta y\rightarrow 0} \Delta y \), \(dz
+    = \lim_{\Delta z \rightarrow 0} \Delta z \) で定められる0に近づいていく微小変化量を表わします。
+
+**** 関数の変化と微分 (1変数関数)
+
+#+ATTR_HTML: :controls controls :width 500
+[[file:./Figs/diff_semi_01.png]] 
+
+- ベクトル \(\vec{PQ}\) を考えます。
+  \(\vec{PQ}\) は下記のように表わせます:
+
+  \begin{eqnarray}
+  \vec{PQ} &=& \Delta x \vec{e_x} + \Delta y \vec{e_y} \\
+  & = &  \Delta x\, \vec{e_x} + ({f(x_0+\Delta x) -  f(x_0)}) \vec{e_y} \\
+  & = &  \Delta x\, \vec{e_x} + (\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}){\Delta x}   \vec{e_y}
+  \end{eqnarray}
+  
+  途中，変化量(\(f(x_0+\Delta x) - f(x_0)\))  を \\
+  平均変化率 (\(\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}\)) と変位\((\Delta  x)\) の積で表わしています。
+
+- \(P\rightarrow Q\) の極限を考えると以下になります:
+
+  \begin{eqnarray}
+  \lim_{Q \rightarrow P} \vec{PQ} & = & 
+  \lim_{\Delta x \rightarrow 0} \left(\Delta x \vec{e_x} + \Delta y \vec{e_y}\right) \\
+ & = & \lim_{\Delta x \rightarrow 0}\left(\Delta_x \vec{e_x} + (f(x_0+\Delta x) -  f(x_0))\vec{e_y} \right)\\
+  & = & \lim_{\Delta x \rightarrow 0}\left(\Delta_x \vec{e_x} + \frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x} {\Delta x}\,\vec{e_y} \right)\\
+   & = & dx \, \vec{e_x} + f'(x) dx \vec{e_y}\\
+  & = & dx \, \vec{e_x} + dy \vec{e_y}\\
+  \end{eqnarray}
+
+- \(\lim_{Q\rightarrow P}\vec{PQ}\) の \(\vec{e_y}\)成分に注目すると
+  \\
+  \( dy = f'(x_0) dx \) が導かれます。
+
+- つまり，\( dx \) も \( dy \) も 0 に近づいていきますが，
+  \\
+  \(y = f(x) \)という関係があるため，
+  \\
+  点P\((x_0，y_0)\)において，\( dy \) は \( dx \) に比べて，
+  \(f'(x_0)\) 倍で 0 に近づいていくことになります。
+
+  
+**** 2変数関数の変化と微分
+
+#+ATTR_HTML: :controls controls :width 500
+[[file:./Figs/diff_semi_02.png]]
+
+2. 曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量\(\Delta_{2}\) を表わす式。
+   \\
+   - \(\Delta_{1} = f(x_0+\Delta{x},y_0) - f(x_0,y_0) \)
+     \\
+   - \(\Delta_{2} = f(x_0+\Delta{x},y_0+\Delta{y}) - f(x_0+\Delta{x},y_0) \)
+     \\
+   極限を取ると偏微分係数になります:
+   \\
+   - \(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{1} = f_y(x_0,y_0)dx \)
+     \\
+   - \(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{2} = f_y(x_0,y_0)dy \)
+     \\
+
+4. ベクトル \(\vec{PR}\) を考えます。
+
+   \(z = f(x, y)\) という関係があるので， \(x\) と \(y\) は独立に動け
+   ますが，\(z=z(x,y)\)です。
+   
+   \(\vec{PR}\) は下記のように表わせます:
+
+\begin{eqnarray}
+\lim_{R \rightarrow P }{\vec{PR}} &=& dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z} \\
+  & = &  dx \vec{e_x} + dy \vec{e_y} + (f_x(x_0, y_0) dx+ f_y(x_0,
+  y_0){dy})\vec{e_z} \\
+  & = &  (dx \vec{e_x} + f_x(x_0, y_0) dx \vec{e_z}) \\
+  &   & + (dy \vec{e_y} + f_y(x_0, y_0)dy) \,\vec{e_z}
+\end{eqnarray}
+
+
+*** 10/26 の課題
+
+**** 平均値の定理からテイラーの定理へ
+
+- 平均値の定理は
+  \\
+  \(f(b) = f(a) + f'(a+\theta_1 h) h\), \(h=(b-a)\), \( 0<\theta_1<1 \)
+  \\
+  - 点 a から h だけ離れた点 b での \(f(b) \) を求める式と考えます。
+
+  - \(f(x)\) の導関数と，\(f(a)\) と， \(f'(a+\theta_1 h)\) が分れば，
+    \(f(b)\) が求められます。
+
+- しかし，\(\theta_1\) が求められないので，\(f'(a)\)から近似値を求めてみましょう。
+
+  - \(f'(a+\theta_1 h)\)に，平均値の定理を適用し，\(f'(a)\)を使って，
+
+    \(f'(a+\theta_1 h) = f'(a) + \cdots\) 
+
+
+
+
+
+
+
+
+
+
+

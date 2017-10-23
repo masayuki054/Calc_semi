@@ -10,6 +10,7 @@ ORGS = [
   "calc.org",
   "calc_semi_1.org",
   "calc_semi_2.org",
+  "calc_semi_3.org",
 ]
 
 SUBDIRS = [
