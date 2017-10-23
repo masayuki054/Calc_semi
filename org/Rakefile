@@ -76,7 +76,7 @@ def deploy(file, dir)
 end
 
 rule ".html" => ".org" do |t|
-  sh "~/bin/org2html #{t.prerequisites.join(' ')}"
+  sh "~/COMM/bin/org2html #{t.prerequisites.join(' ')}"
   deploy(t.name, "#{SITE}/#{DIR}")
 end
 
