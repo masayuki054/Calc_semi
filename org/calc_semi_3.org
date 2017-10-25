@@ -25,9 +25,11 @@
 
     - 全微分は何を求めているのですか？
 
-    - 曲線 \(f_1\) の求め方
+    - 曲線 \(f_1\) の求め方は？
 
     自分は理解できているか，確認してみてください。
+
+    先生の答えや考えは，今日のプリントの中に書かれているはずです。
 
 *** 前回のまとめのまとめ
 
@@ -39,7 +41,14 @@
 
     \(dx\)，\(dy\)， \(dz\) は，\(dx = \lim_{\Delta x \rightarrow 0}
     \Delta x \), \(dy = \lim_{\Delta y\rightarrow 0} \Delta y \), \(dz
-    = \lim_{\Delta z \rightarrow 0} \Delta z \) で定められる0に近づいていく微小変化量を表わします。
+    = \lim_{\Delta z \rightarrow 0} \Delta z \) で定められる0に近づい
+    ていく微小変化量を表わします。
+
+    \(dx\)，\(dy\)， \(dz\) は，それだけで考えると，ゼロとみなせる微小
+    量ですが，\(y=f(x)\) や \(z=f(x,y)\) などの関係があると，
+    \(dy\) と\(dx\)，\(dz\) と \(dx\) と\(dy\) の間にも成り立つ関係式
+    があり，それが微分係数だったり，導関数だったり，全微分の式だったり
+    します。
 
 **** 関数の変化と微分 (1変数関数)
 
@@ -52,7 +61,7 @@
   \begin{eqnarray}
   \vec{PQ} &=& \Delta x \vec{e_x} + \Delta y \vec{e_y} \\
   & = &  \Delta x\, \vec{e_x} + ({f(x_0+\Delta x) -  f(x_0)}) \vec{e_y} \\
-  & = &  \Delta x\, \vec{e_x} + (\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}){\Delta x}   \vec{e_y}
+  & = &  \Delta x\, \vec{e_x} + \left(\frac{f(x_0+\Delta x) -  f(x_0)}{\Delta x}\right){\Delta x}   \vec{e_y}
   \end{eqnarray}
   
   途中，変化量(\(f(x_0+\Delta x) - f(x_0)\))  を \\
@@ -70,34 +79,30 @@
   \end{eqnarray}
 
 - \(\lim_{Q\rightarrow P}\vec{PQ}\) の \(\vec{e_y}\)成分に注目すると
-  \\
   \( dy = f'(x_0) dx \) が導かれます。
 
 - つまり，\( dx \) も \( dy \) も 0 に近づいていきますが，
-  \\
   \(y = f(x) \)という関係があるため，
-  \\
   点P\((x_0，y_0)\)において，\( dy \) は \( dx \) に比べて，
   \(f'(x_0)\) 倍で 0 に近づいていくことになります。
 
-  
 **** 2変数関数の変化と微分
 
 #+ATTR_HTML: :controls controls :width 500
 [[file:./Figs/diff_semi_02.png]]
 
 2. 曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量\(\Delta_{2}\) を表わす式。
-   \\
+
    - \(\Delta_{1} = f(x_0+\Delta{x},y_0) - f(x_0,y_0) \)
-     \\
+
    - \(\Delta_{2} = f(x_0+\Delta{x},y_0+\Delta{y}) - f(x_0+\Delta{x},y_0) \)
-     \\
+
    極限を取ると偏微分係数になります:
-   \\
+
    - \(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{1} = f_y(x_0,y_0)dx \)
-     \\
+
    - \(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{2} = f_y(x_0,y_0)dy \)
-     \\
+
 
 4. ベクトル \(\vec{PR}\) を考えます。
 
@@ -122,32 +127,31 @@
 \([a, b]\) で微分可能な関数 \(f(x)\) に対する，平均値の定理は次のように
 解釈できると考えます。
 
-自分で納得できるか考え，納得できれば自分の言葉でまとめてください.
+読んで自分で考え，納得できれば自分の言葉でまとめてください.
 
-
-
-1. 区間 \([a,b]\) の間に，接線の傾きが平均変化率となる点 c が存在する。\\
+1. 区間 \([a,b]\) の間に，接線の傾きが平均変化率となる点 c が存在する。
 
    \begin{eqnarray}
-     f(b) - f(a) & = & f'(c)\,(b-a), & a< c <b \\
-   \end{eqnarray}\\
-
-   - 上式の\(b\rightarrow a\)の極限が，\(dy=f'(x)dx\)となる。
-     \\
-   - 両辺を \((b-a)\)で割り，\(b\rightarrow a\)の極限が，\(dy/dx = f'(x) \)となる。
-     \\
-
-2. \(f(a)\)の値から，\(f(b)\)の値を正確に計算できる。\\
-
-   \begin{eqnarray}
-    f(b) &=& f(a) + f'(c)\,(b-a), & a< c < b \\
+     f(b) - f(a) & = & f'(c)\,(b-a), & a< c < b \\
    \end{eqnarray}
 
+   - 上式の\(b\rightarrow a\)の極限が，\(dy=f'(x)dx\)となる。
+
+   - 両辺を \((b-a)\)で割り，\(b\rightarrow a\)の極限が，\(dy/dx = f'(x) \)となる。
+
+
+2. \(f(a)\)の値から，\(f(b)\)の値を正確に計算できる。
+
+\begin{eqnarray}
+  f(b) &=& f(a) + f'(c) \, (b-a), a < c < b \\
+\end{eqnarray}
+
+
    但し，\(c\)の値がわからないと\(f(b)\)の値は正確に求められないが，
-   \\
+
    近似を用いながら，だんだんに \(f(b)\)を求めていくことができる。
    \(\sqrt{10}\)の計算や次節のやり方などがその例。
-   \\
+
 
 *** 平均値の定理を繰り返す
 
@@ -155,17 +159,19 @@
 え，平均値の定理を下記のように書く。繰り返すごとに新しい\(\theta\)
 がでてくるので，添字を付ける。
 
+
 \begin{eqnarray}
-     f(b) &=& f(a) + f'(a+\theta_1 h) h, & 0<\theta_1<1 \\
+     f(b) &=& f(a) + f'(a+\theta_1 h) h, & 0 < \theta_1 < 1 \\
           & & & h=(b-a)
 \end{eqnarray}
 
+
 - 上式を，\(a\) から \(h\) だけ離れた \(b\) での \(f(b) \) を求める式と考える。
-  \\
+
 - \(f(x)\) の導関数と，\(f(a)\) と， \(f'(a+\theta_1 h)\) が分れば，\(f(b)\) が求められる。
-  \\
+
 - しかし，\(\theta_1\)が分らないため，\(f'(a+\theta_1 h)\) が求められない。
-  \\
+
 
 そこで，\(f'(a+\theta_1 h)\)に，平均値の定理を適用し，\(f'(a)\)を使って，
 表してみよう。
@@ -188,22 +194,7 @@
 
 
 結局，\(f(b)\) の計算式はどうなる？
-\\
+
 テイラーの定理みたいのが導けましたか？
-\\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
