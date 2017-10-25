@@ -131,9 +131,9 @@
 
 1. 区間 \([a,b]\) の間に，接線の傾きが平均変化率となる点 c が存在する。
 
-   \begin{eqnarray}
-     f(b) - f(a) & = & f'(c)\,(b-a), & a< c < b \\
-   \end{eqnarray}
+\begin{eqnarray}
+  f(b) - f(a) & = & f'(c)\,(b-a), & a< c < b \\
+\end{eqnarray}
 
    - 上式の\(b\rightarrow a\)の極限が，\(dy=f'(x)dx\)となる。
 
