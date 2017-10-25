@@ -4,7 +4,7 @@
 <html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>微分ゼミ 3回目 (2017.10.26)</title>
-<!-- 2017-10-25 Wed 18:53 -->
+<!-- 2017-10-25 Wed 19:12 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="suzuki@iwate-u.ac.jp" />
@@ -376,10 +376,13 @@ for the JavaScript code in this tag.
 
 <ol class="org-ol">
 <li>区間 \([a,b]\) の間に，接線の傾きが平均変化率となる点 c が存在する。
+</li>
+</ol>
 
 \begin{eqnarray}
-  f(b) - f(a) & = & f'(c)\,(b-a), & a< c <b \\
+  f(b) - f(a) & = & f'(c)\,(b-a), & a< c < b \\
 \end{eqnarray}
+
 
 <ul class="org-ul">
 <li>上式の\(b\rightarrow a\)の極限が，\(dy=f'(x)dx\)となる。
@@ -388,16 +391,17 @@ for the JavaScript code in this tag.
 <li>両辺を \((b-a)\)で割り，\(b\rightarrow a\)の極限が，\(dy/dx = f'(x) \)となる。
 </li>
 </ul>
-</li>
-</ol>
 
 
 <ol class="org-ol">
 <li>\(f(a)\)の値から，\(f(b)\)の値を正確に計算できる。
+</li>
+</ol>
 
 \begin{eqnarray}
- f(b) &=& f(a) + f'(c)\,(b-a), & a< c < b \\
+  f(b) &=& f(a) + f'(c) \, (b-a), a < c < b \\
 \end{eqnarray}
+
 
 <p>
 但し，\(c\)の値がわからないと\(f(b)\)の値は正確に求められないが，
@@ -407,8 +411,6 @@ for the JavaScript code in this tag.
 近似を用いながら，だんだんに \(f(b)\)を求めていくことができる。
 \(\sqrt{10}\)の計算や次節のやり方などがその例。
 </p>
-</li>
-</ol>
 </div>
 </div>
 
@@ -422,10 +424,12 @@ for the JavaScript code in this tag.
 がでてくるので，添字を付ける。
 </p>
 
+
 \begin{eqnarray}
-     f(b) &=& f(a) + f'(a+\theta_1 h) h, & 0<\theta_1<1 \\
+     f(b) &=& f(a) + f'(a+\theta_1 h) h, & 0 < \theta_1 < 1 \\
           & & & h=(b-a)
 \end{eqnarray}
+
 
 <ul class="org-ul">
 <li>上式を，\(a\) から \(h\) だけ離れた \(b\) での \(f(b) \) を求める式と考える。
@@ -480,7 +484,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: suzuki@iwate-u.ac.jp</p>
-<p class="date">Created: 2017-10-25 Wed 18:53</p>
+<p class="date">Created: 2017-10-25 Wed 19:12</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="https://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
