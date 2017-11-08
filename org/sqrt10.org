@@ -1,0 +1,58 @@
+# #+include: info/common-header.org
+#+OPTIONS:   H:6 toc:nil num:nil　
+#+OPTIONS: ^:{}
+#+PROPERTY:  header-args :padline no
+#+title: 微分ゼミ
+#+author: suzuki@iwate-u.ac.jp
+#+title: sqrt 10 (2017.11.09)
+#+OPTIONS: tex:t \n:nil latex:t
+#+BEGIN_SRC elisp :exports none
+(setq org-startup-with-inline-images t)
+#+END_SRC
+
+** 平均値の定理の応用
+
+
+平均値の定理,  \(f(b) = f(a) + f'(c)(b-a)\), \( a < c < b \) となる \(c\) が
+存在する, を用い，\(f(x) = \sqrt{x}\) として，\(\sqrt{10}\) の近似値
+を求めてみよう.
+
+\( \sqrt{x}' = \frac{1}{2\sqrt{x}} \) なので，
+平均値の定理より，
+
+\begin{array}{lllll}
+\sqrt{10} & = & \sqrt{9} + \frac{1}{2\sqrt{c}} & = & 3 + \frac{1}{2\sqrt{c}}
+\end{array}
+
+となる \( 9<c<10 \) が存在する。
+
+\( 9<c<10 \) より \(
+\frac{1}{2\sqrt{9}} > \frac{1}{2\sqrt{c}}  > 
+\frac{1}{2\sqrt{10}}
+\)なので，
+
+\begin{array}{lllll}
+3+\frac{1}{6} &>& \sqrt{10} &>& 3+\frac{1}{2\sqrt{10}}
+\end{array}
+
+
+上式で，\(\sqrt{c}\)の第一近似 \(3+\frac{1}{6}\) が求まった。
+そこで最右不等式の \(\sqrt{10}\) をこの値で置き代えると，
+
+\begin{array}{lll}
+3+\frac{1}{2\sqrt{10}} & > & 3+\frac{1}{2(3+\frac{1}{6})} =  3+\frac{3}{19} = \frac{60}{19}
+\end{array}
+
+求まった近似値を2乗してみると:
+\begin{array}{lll}
+(\frac{19}{6})^2 & = & (3.166667)^2 & = &  10.027778 \\
+(\frac{60}{19})^2 & = & (3.1578947)^2 &= & 9.972299
+\end{array}
+
+
+
+
+
+
+
+
