@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>微分ゼミ 2回目 (2017.10.19)</title>
-<!-- 2017-10-23 月 10:44 -->
+<!-- 2017-11-08 水 15:29 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="suzuki@iwate-u.ac.jp" />
@@ -275,10 +275,10 @@ for the JavaScript code in this tag.
 <br  />
 <ul class="org-ul">
 <li>\(\Delta_{1} = f(x_0+\Delta{x},y_0) - f(x_0,y_0) \)<br  />
-     <br  />
+      <br  />
 </li>
 <li>\(\Delta_{2} = f(x_0+\Delta{x},y_0+\Delta{y}) - f(x_0+\Delta{x},y_0) \)<br  />
-     <br  />
+      <br  />
 </li>
 </ul>
 <p>
@@ -286,11 +286,11 @@ for the JavaScript code in this tag.
 <br  />
 </p>
 <ul class="org-ul">
-<li>\(\lim_{\Delta{x} \rightarrow 0, \Delta{y} \rightarrow 0} \Delta{1} = f_y(x_0,y_0)dx \)<br  />
-     <br  />
+<li>\(\lim_{\Delta{x} \rightarrow 0, \Delta{y} \rightarrow 0} \Delta{1} = f_x(x_0,y_0)dx \)<br  />
+      <br  />
 </li>
-<li>\(\lim_{\Delta{x} \rightarrow 0, {\Delta{y} \rightarrow 0} \Delta{2} = f_y(x_0,y_0)dy \)<br  />
-     <br  />
+<li>\(\lim_{\Delta{x} \rightarrow 0, \Delta{y} \rightarrow 0} \Delta{2} = f_y(x_0,y_0)dy \)<br  />
+      <br  />
 </li>
 </ul>
 </li>
@@ -307,23 +307,24 @@ for the JavaScript code in this tag.
 
 <p>
 \(\lim_{\Delta x \rightarrow 0, \Delta{y} \rightarrow 0} \{\Delta{z} = \Delta_{1} +
-   \Delta_{2}\} \) =&gt; \(dz = f_x(x_0, y_0)dx + f_y(x_0, y_0)dy\)<br  />
+    \Delta_{2}\} \) =&gt; \(dz = f_x(x_0, y_0)dx + f_y(x_0, y_0)dy\)<br  />
 <br  />
 </p>
 <ul class="org-ul">
-<li>接平面 \(z -z_0 = f_x(x_0, y_0)x + f_y(x_0, y_0)y\)上の微小変化を表す<br  />
-<br  />
-</li>
 <li>微小変化の方向は無数にあり，下記ベクトルで表わされる<br  />
 <br  />
-\( \vec{dz} = dx \vec{x} + dy \vec{y} +  dz \vec{z} \)<br  />
-<br  />
-\(f_x(x_0, y_0)\vec{dx} + f_y(x_0, y_0)\vec{dy}\)<br  />
+\begin{array}
+\vec{\mathbf{d}_f} & = & dx \vec{\mathbf{e}_x} + dy \vec{\mathbf{e}_y} +  dz \vec{\mathbf{e}_z} \\
+         & = & dx \vec{\mathbf{e}_x} + dy \vec{\mathbf{e}_y} + (f_x(x_0, y_0) + f_y(x_0, y_0)) \vec{\mathbf{e}_z} \\
+         & = & ( dx \vec{\mathbf{e}_x} + f_x(x_0, y_0) \vec{\mathbf{e}_z}) + (dy \vec{\mathbf{e}_y} + f_y(x_0, y_0) \vec{\mathbf{e}_z} \\
+\end{array}
+</li>
+
+<li>接平面 \(z -z_0 = f_x(x_0, y_0)x + f_y(x_0, y_0)y\)上の微小変化を表す<br  />
+ <br  />
+　<br  />
 </li>
 </ul>
-<p>
-　<br  />
-</p>
 </li>
 </ol>
 </div>
@@ -384,8 +385,8 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: suzuki@iwate-u.ac.jp</p>
-<p class="date">Created: 2017-10-23 月 10:44</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="date">Created: 2017-11-08 水 15:29</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

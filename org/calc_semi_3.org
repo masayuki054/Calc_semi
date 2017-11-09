@@ -25,6 +25,16 @@
 
     - 全微分は何を求めているのですか？
 
+      - 全微分は，全変化量のこと。
+
+        - y=f(x) => d(y) = d(f(x)) = lim f(x+dx)-f(x) = f'(x) dx
+
+	- z = f(x,y) => d(z) = d(f(x,y))
+	  dz = lim f(x+dx, y+dy) - f(x,y)
+             = lim f(x+dx, y+dy) - f(x+dx, y) 
+               + lim f(x+dx, y) - f(x, y) 
+
+
     - 曲線 \(f_1\) の求め方は？
 
     自分は理解できているか，確認してみてください。
@@ -35,7 +45,7 @@
 
     今回は，ベクトルを使って微分の本質を説明してみます。
 
-    以下，\(\vec{e_x}\), \(\vec{e_y}\), \(\vec{e_x}\) は \(x\)と\(y\)と \(z\)方向の単位ベクトルとします。
+    以下，\(\vec{e_x}\), \(\vec{e_y}\), \(\vec{e_z}\) は \(x\)と\(y\)と \(z\)方向の単位ベクトルとします。
 
     \(\Delta x\), \(\Delta y\), \(\Delta z\) は \(x\)と\(y\)と\(z\)方向の変化量とします。
 
@@ -99,7 +109,7 @@
 
    極限を取ると偏微分係数になります:
 
-   - \(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{1} = f_y(x_0,y_0)dx \)
+   - \(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{1} = f_x(x_0,y_0)dx \)
 
    - \(\lim_{\stackrel{\Delta{x} \rightarrow 0}{\Delta{y} \rightarrow 0}} \Delta{2} = f_y(x_0,y_0)dy \)
 
@@ -139,7 +149,6 @@
 
    - 両辺を \((b-a)\)で割り，\(b\rightarrow a\)の極限が，\(dy/dx = f'(x) \)となる。
 
-
 2. \(f(a)\)の値から，\(f(b)\)の値を正確に計算できる。
 
 \begin{eqnarray}
@@ -161,7 +170,7 @@
 
 
 \begin{eqnarray}
-     f(b) &=& f(a) + f'(a+\theta_1 h) h, & 0 < \theta_1 < 1 \\
+     f(a+h) &=& f(a) + f'(a+\theta_1 h) h, & 0 < \theta_1 < 1 \\
           & & & h=(b-a)
 \end{eqnarray}
 

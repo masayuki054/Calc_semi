@@ -10,14 +10,13 @@ ORGS = [
   "calc_semi_1.org",
   "calc_semi_2.org",
   "calc_semi_3.org",
+  "calc_semi_4.org",
+  "contents.org",
+  "sqrt10.org",
+  "q_and_a.org",
 ]
 
 SUBDIRS = [
-  "info", 
-  "lects", 
-  "memos", 
-  "org-docs", 
-  "supplement"
 ]
 
 HTMLS = ORGS.map do |f|

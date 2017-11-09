@@ -57,43 +57,45 @@
     \\
     本質は，1変数の関数に
     \\
-   - \(z = f_1(x) = \{f(x,y_0), y=y0 \} \) (平面の交わり)
-     \\
-   - \(z = f_2(y) = \{f(x_0+\Delta{x},y), x=x0+\Delta{x}\} \) (平面と
-     の交わり)
-     \\
-2. 曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量\(\Delta_{2}\) を表わす式。
-   \\
-   - \(\Delta_{1} = f(x_0+\Delta{x},y_0) - f(x_0,y_0) \)
-     \\
-   - \(\Delta_{2} = f(x_0+\Delta{x},y_0+\Delta{y}) - f(x_0+\Delta{x},y_0) \)
-     \\
-   偏微分係数との関係は？
-   \\
-   - \(\lim_{\Delta{x} \rightarrow 0, \Delta{y} \rightarrow 0} \Delta{1} = f_y(x_0,y_0)dx \)
-     \\
-   - \(\lim_{\Delta{x} \rightarrow 0, {\Delta{y} \rightarrow 0} \Delta{2} = f_y(x_0,y_0)dy \)
-     \\
-3. 関数 \(z = f(x,y) \)の PR での変化量 \(\Delta{z}\) 
+    - \(z = f_1(x) = \{f(x,y_0), y=y0 \} \) (平面の交わり)
+      \\
+    - \(z = f_2(y) = \{f(x_0+\Delta{x},y), x=x0+\Delta{x}\} \) (平面と
+      の交わり)
+      \\
+ 2. 曲線 \(f_1\)の変化量 \(\Delta_{1}\)， 曲線 \(f_2\)の変化量\(\Delta_{2}\) を表わす式。
+    \\
+    - \(\Delta_{1} = f(x_0+\Delta{x},y_0) - f(x_0,y_0) \)
+      \\
+    - \(\Delta_{2} = f(x_0+\Delta{x},y_0+\Delta{y}) - f(x_0+\Delta{x},y_0) \)
+      \\
+    偏微分係数との関係は？
+    \\
+    - \(\lim_{\Delta{x} \rightarrow 0, \Delta{y} \rightarrow 0} \Delta{1} = f_x(x_0,y_0)dx \)
+      \\
+    - \(\lim_{\Delta{x} \rightarrow 0, \Delta{y} \rightarrow 0} \Delta{2} = f_y(x_0,y_0)dy \)
+      \\
+ 3. 関数 \(z = f(x,y) \)の PR での変化量 \(\Delta{z}\) 
 
-   グラフを展開してみると？ 
-   \\
-   \(\Delta{z} = \Delta_{1} + \Delta_{2} \)
+    グラフを展開してみると？ 
+    \\
+    \(\Delta{z} = \Delta_{1} + \Delta_{2} \)
 
-4. 極限を取ることで全微分の式を説明してください。
+ 4. 極限を取ることで全微分の式を説明してください。
 
-   \(\lim_{\Delta x \rightarrow 0, \Delta{y} \rightarrow 0} \{\Delta{z} = \Delta_{1} +
-   \Delta_{2}\} \) => \(dz = f_x(x_0, y_0)dx + f_y(x_0, y_0)dy\)
-   \\
-      - 接平面 \(z -z_0 = f_x(x_0, y_0)x + f_y(x_0, y_0)y\)上の微小変化を表す
-	\\  
-      - 微小変化の方向は無数にあり，下記ベクトルで表わされる
-	\\
-        \( \vec{dz} = dx \vec{x} + dy \vec{y} +  dz \vec{z} \)
-	\\
-        \(f_x(x_0, y_0)\vec{dx} + f_y(x_0, y_0)\vec{dy}\)
+    \(\lim_{\Delta x \rightarrow 0, \Delta{y} \rightarrow 0} \{\Delta{z} = \Delta_{1} +
+    \Delta_{2}\} \) => \(dz = f_x(x_0, y_0)dx + f_y(x_0, y_0)dy\)
+    \\
+    - 微小変化の方向は無数にあり，下記ベクトルで表わされる
+      \\
+      \begin{array}
+      \vec{\mathbf{d}_f} & = & dx \vec{\mathbf{e}_x} + dy \vec{\mathbf{e}_y} +  dz \vec{\mathbf{e}_z} \\
+               & = & dx \vec{\mathbf{e}_x} + dy \vec{\mathbf{e}_y} + (f_x(x_0, y_0) + f_y(x_0, y_0)) \vec{\mathbf{e}_z} \\
+               & = & ( dx \vec{\mathbf{e}_x} + f_x(x_0, y_0) \vec{\mathbf{e}_z}) + (dy \vec{\mathbf{e}_y} + f_y(x_0, y_0) \vec{\mathbf{e}_z} \\
+      \end{array}
 
-    　
+    - 接平面 \(z -z_0 = f_x(x_0, y_0)x + f_y(x_0, y_0)y\)上の微小変化を表す
+      \\  
+     　
 *** 10/19 の課題
 
 **** 平均値の定理
