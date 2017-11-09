@@ -1,0 +1,151 @@
+# #+include: info/common-header.org
+#+OPTIONS:   H:6 toc:nil num:nil　
+#+OPTIONS: ^:{}
+#+PROPERTY:  header-args :padline no
+#+title: 微分ゼミ
+#+author: suzuki@iwate-u.ac.jp
+
+#+title: 4回目 (2017.11.9)
+#+OPTIONS: tex:t \n:nil latex:t
+#+BEGIN_SRC elisp :exports none
+(setq org-startup-with-inline-images t)
+#+END_SRC
+#+STYLE: <link rel="stylesheet" type="text/css" href="myorg.css"/>
+
+** 前回までのまとめや手書き資料
+
+   ネットで 'masayuki054 hatena 微分積分' で検索して，
+   「はてなダイアリー」というサイトの，
+   「masayuki054's diary」 のページを見つけてください。
+
+   どこかにある，「微分ゼミ -- 岩手大学 学修支援 2017」というページが
+   入口です。
+
+    http://masayuki054.hatenablog.com/entry/2017/11/08/211556
+
+** 平均値の定理からテイラーの定理へ 再び
+
+*** 平均値の定理の意味 (再び)
+\([a, b]\) で微分可能な関数 \(f(x)\) に対する，平均値の定理は次のように
+解釈できると考えます。
+
+読んで自分で考え，納得できれば自分の言葉でまとめてください.
+
+1. 区間 \([a,b]\) の間に，接線の傾きが平均変化率となる点 c が存在する。
+
+\begin{eqnarray}
+  f(b) - f(a) & = & f'(c)\,(b-a), & a< c < b \\
+\end{eqnarray}
+
+   - 上式の\(b\rightarrow a\)の極限が，\(dy=f'(x)dx\)となる。
+
+   - 両辺を \((b-a)\)で割り，\(b\rightarrow a\)の極限が，\(dy/dx = f'(x) \)となる。
+
+2. \(f(a)\)の値から，\(f(a+h)\)の値を正確に計算できる。
+
+\begin{eqnarray}
+  f(a+h) &=& f(a) + f'(c) \, h, a < c < a+h \\
+\end{eqnarray}
+
+
+   但し，\(c\)の値がわからないと\(f(a+h)\)の値は正確に求められないが，
+
+   近似を用いながら，だんだんに \(f(a+h)\)を求めていくことができる。
+   \(\sqrt{10}\)の計算や次節のやり方などがその例。
+
+*** 平均値の定理を繰り返す
+
+\(h_0 = b -a\) とし，\(c\) の代わりに，\(c = a + \theta_1 h_0\) と書き変
+え，平均値の定理を下記のように書く。繰り返すごとに新しい\(\theta\)と\(h\)
+がでてくるので，添字を付けることにする:
+
+\begin{array}{lllll}
+     f(a+h_0) & = & f(a) + \underline{f^{(1)}(a+h_1) h_0}, \\
+     & & &  h_1 = \theta_1\,h_0, & 0 < \theta_1 < 1 \\
+     f^{(1)}(a+h_1) h_0 &=&  f^{(1)}(a) h_1 + \underline{f^{(2)}(a+h_2) h_0 h_1} \\
+     & & &  h_2 = \theta_2\,h_1, & 0 < \theta_2 < 1 \\
+     f^{(2)}(a+h_2) h_0 h_1 &=&  f^{(2)}(a) h_0 h_1 + f^{(3)}(a+h_3) h_0 h_1 h_2 \\
+     & & &  h_3 = \theta_3\,h_2, & 0 < \theta_3 < 1 
+\end{array}
+
+
+- 上式を，\(a\) から \(h\) だけ離れた \(a+h\) での \(f(a+h) \) を求める式と考える。
+
+- \(f(x)\) の導関数と，\(f(a)\) と， \(f'(a+\theta_1 h)\) が分れば，\(f(b)\) が求められる。
+
+- しかし，\(\theta_1\)が分らないため，\(f'(a+\theta_1 h)\) が求められない。
+
+- そこで，\(f'(a+\theta_1 h)\)に，平均値の定理を適用し，\(f'(a)\)を使って，
+  表す。
+
+- 繰り返す。
+
+n回近似を進めるとどうなりますか：
+
+\begin{array}{lllll}
+     f^{(n)}(a+h_{n}) h_0 \cdots h_{n-1} &=&  f^{(n)}(a) h_0 \cdots h_{n-1}  + f^{(n+1)}(a+h_{n+1}) h_0 \cdots h_{n} \\
+     & & &  h_{n+1} = \theta_{n+1}\,h_n, & 0 < \theta_{n+1} < 1 
+\end{array}
+
+
+結局，\(f(a+h)\) の計算式はどうなる？
+
+テイラーの定理みたいのが導けましたか？
+
+** テイラーの定理を導く
+
+- 前節の結果で，\(a\)からの距離 \(h\) を変数と考え，\(x\)と置き，
+  \(\alpha_i = \theta_1 \cdots \theta_i\) と置くと，
+  下式となる:
+
+   \begin{array}{llll}
+      f(a+x) & = & \sum_{i=0}^{n-1}{\alpha_i}{f^{(i)}(a)} x^i
+      + \underline{{\alpha_{n}{f^{(n)}(c)} x^n}}, & 0 < c < x \\
+   \end{array}
+
+- 無限まで考えると:
+
+  \begin{array}{llll}
+    f(a+x) & = & \sum_{i=0}^{\infty}{\alpha_i}{f^{(i)}(a)} x^i
+  \end{array}
+
+- 両辺をn回微分して，\(x=0\) として \(f^{(n)}(a)\)を求めてください。
+
+- \(\alpha_n\) が \(\frac{1}{n!}\) となりましたか？
+
+
+** マクローリンの定理と展開の意味
+
+下の式の右辺は，原点から\(x\)離れた点での\(f(x)\)の値を計算する(できる)式
+となる:
+
+\begin{array}{llll}
+   f(x) & = & \sum_{i=0}^{n-1}\frac{f^{(i)}(0)}{i!} x^i
+   + \underline{\frac{f^{(n)}(c)}{n!} x^n}, & 0 < c < x \\
+\end{array}
+
+\(sin(x)\)の場合は:
+
+\begin{array}{llll}
+   sin(x) & = & x - \frac{1}{3!}x^3 + \frac{1}{5!}x^5 - \cdots 
+\end{array}
+
+
+\(sin(x_0)\)の値は，右辺に\(x=x_0\)を代入して，求められる。
+
+
+- \(sin(x_0)\)を正確に求めるための条件は何でしょう？
+
+
+
+\(f(x)\) のマクローリン展開式を，関数として \(f(x)\)と見做していいで
+しょうか？
+
+
+- \(sin(x)\)のマクローリン展開式を微分すると，
+  \(cos(x)\)のマクローリン展開式の微分になっていますか？
+
+- \(f(x)\) のマクローリン展開式を，関数として \(f(x)\)と見做していいた
+  めの条件は何でしょう？
+
+
