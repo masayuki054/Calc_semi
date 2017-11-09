@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>微分ゼミ 4回目 (2017.11.9)</title>
+<!-- 2017-11-09 Thu 09:38 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="suzuki@iwate-u.ac.jp" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">微分ゼミ 4回目 (2017.11.9)</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 微分とは</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 前回の質問</h3>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 前回までのまとめや手書き資料</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+ネットで 'masayuki054 hatena 微分積分' で検索して，
+「はてなダイアリー」というサイトの，
+「masayuki054's diary」 のページを見つけてください。
+</p>
+
+<p>
+どこかにある，「微分ゼミ &#x2013; 岩手大学 学修支援 2017」というページが
+入口です。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 平均値の定理からテイラーの定理へ 再び</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 平均値の定理の意味</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+\([a, b]\) で微分可能な関数 \(f(x)\) に対する，平均値の定理は次のように
+解釈できると考えます。
+</p>
+
+<p>
+読んで自分で考え，納得できれば自分の言葉でまとめてください.
+</p>
+
+<ol class="org-ol">
+<li>区間 \([a,b]\) の間に，接線の傾きが平均変化率となる点 c が存在する。
+</li>
+</ol>
+
+\begin{eqnarray}
+  f(b) - f(a) & = & f'(c)\,(b-a), & a< c < b \\
+\end{eqnarray}
+
+<ul class="org-ul">
+<li>上式の\(b\rightarrow a\)の極限が，\(dy=f'(x)dx\)となる。
+</li>
+
+<li>両辺を \((b-a)\)で割り，\(b\rightarrow a\)の極限が，\(dy/dx = f'(x) \)となる。
+</li>
+
+<li>\(f(a)\)の値から，\(f(a+h)\)の値を正確に計算できる。
+</li>
+</ul>
+
+\begin{eqnarray}
+  f(a+h) &=& f(a) + f'(c) \, h, a < c < a+h \\
+\end{eqnarray}
+
+
+<p>
+但し，\(c\)の値がわからないと\(f(a+h)\)の値は正確に求められないが，
+</p>
+
+<p>
+近似を用いながら，だんだんに \(f(a+h)\)を求めていくことができる。
+\(\sqrt{10}\)の計算や次節のやり方などがその例。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 平均値の定理を繰り返す</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+\(h_0 = b -a\) とし，\(c\) の代わりに，\(c = a + \theta_1 h_0\) と書き変
+え，平均値の定理を下記のように書く。繰り返すごとに新しい\(\theta\)と\(h\)
+がでてくるので，添字を付けることにする:
+</p>
+
+\begin{array}{lllll}
+     f(a+h_0) & = & f(a) + \underline{f^{(1)}(a+h_1) h_0}, \\
+     & & &  h_1 = \theta_1\,h_0, & 0 < \theta_1 < 1 \\
+     f^{(1)}(a+h_1) h_0 &=&  f^{(1)}(a) h_1 + \underline{f^{(2)}(a+h_2) h_0 h_1} \\
+     & & &  h_2 = \theta_2\,h_1, & 0 < \theta_2 < 1 \\
+     f^{(2)}(a+h_2) h_0 h_1 &=&  f^{(2)}(a) h_0 h_1 + f^{(3)}(a+h_3) h_0 h_1 h_2 \\
+     & & &  h_3 = \theta_3\,h_2, & 0 < \theta_3 < 1 
+\end{array}
+
+
+<ul class="org-ul">
+<li>上式を，\(a\) から \(h\) だけ離れた \(a+h\) での \(f(a+h) \) を求める式と考える。
+</li>
+
+<li>\(f(x)\) の導関数と，\(f(a)\) と， \(f'(a+\theta_1 h)\) が分れば，\(f(b)\) が求められる。
+</li>
+
+<li>しかし，\(\theta_1\)が分らないため，\(f'(a+\theta_1 h)\) が求められない。
+</li>
+
+<li>そこで，\(f'(a+\theta_1 h)\)に，平均値の定理を適用し，\(f'(a)\)を使って，
+表す。
+</li>
+
+<li>繰り返す。
+</li>
+</ul>
+
+<p>
+n回近似を進めるとどうなりますか：
+</p>
+
+\begin{array}{lllll}
+     f^{(n)}(a+h_{n}) h_0 \cdots h_{n-1} &=&  f^{(n)}(a) h_0 \cdots h_{n-1}  + f^{(n+1)}(a+h_{n+1}) h_0 \cdots h_{n} \\
+     & & &  h_{n+1} = \theta_{n+1}\,h_n, & 0 < \theta_{n+1} < 1 
+\end{array}
+
+
+<p>
+結局，\(f(a+h)\) の計算式はどうなる？
+</p>
+
+<p>
+テイラーの定理みたいのが導けましたか？
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> テイラーの定理を導く</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>前節の結果で，\(a\)からの距離 \(h\) を変数と考え，\(x\)と置き，
+\(\alpha_i = \theta_1 \cdots \theta_i\) と置くと，
+下式となる:
+
+\begin{array}{llll}
+   f(a+x) & = & \sum_{i=0}^{n-1}{\alpha_i}{f^{(i)}(a)} x^i
+   + \underline{{\alpha_{n}{f^{(n)}(c)} x^n}}, & 0 < c < x \\
+\end{array}
+</li>
+
+<li>無限まで考えると:
+
+\begin{array}{llll}
+  f(a+x) & = & \sum_{i=0}^{\infty}{\alpha_i}{f^{(i)}(a)} x^i
+\end{array}
+</li>
+
+<li>両辺をn回微分して，\(x=0\) として \(f^{(n)}(a)\)を求めてください。
+</li>
+
+<li>\(\alpha_n\) が \(\frac{1}{i!}\) となりましたか？
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> マクローリンの定理と展開の意味</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+下の式の右辺は，原点から\(x\)離れた点での\(f(x)\)の値を計算する(できる)式
+となる:
+</p>
+
+\begin{array}{llll}
+   f(x) & = & \sum_{i=0}^{n-1}\frac{f^{(i)}(0)}{i!} x^i
+   + \underline{\frac{f^{(n)}(c)}{n!} x^n}, & 0 < c < x \\
+\end{array}
+
+<p>
+\(sin(x)\)の場合は:
+</p>
+
+\begin{array}{llll}
+   sin(x) & = & x - \frac{1}{3!}x^3 + \frac{1}{5!}x^5 - \cdots 
+\end{array}
+
+
+<p>
+\(sin(x_0)\)の値は，右辺に\(x=x_0\)を代入して，求められる。
+</p>
+
+
+<ul class="org-ul">
+<li>\(sin(x_0)\)を正確に求めるための条件は何でしょう？
+</li>
+</ul>
+
+
+
+<p>
+\(f(x)\) のマクローリン展開式を，関数として \(f(x)\)と見做していいで
+しょうか？
+</p>
+
+
+<ul class="org-ul">
+<li>\(sin(x)\)のマクローリン展開式を微分すると，
+\(cos(x)\)のマクローリン展開式の微分になっていますか？
+</li>
+
+<li>\(f(x)\) のマクローリン展開式を，関数として \(f(x)\)と見做していいた
+めの条件は何でしょう？
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: suzuki@iwate-u.ac.jp</p>
+<p class="date">Created: 2017-11-09 Thu 09:38</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="https://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
