@@ -1,4 +1,4 @@
-# #+include: info/common-header.org
+#+include: info/common-header.org
 #+OPTIONS:   H:6 toc:nil num:nil　
 #+OPTIONS: ^:{}
 #+PROPERTY:  header-args :padline no
@@ -10,39 +10,45 @@
 #+BEGIN_SRC elisp :exports none
 (setq org-startup-with-inline-images t)
 #+END_SRC
-#+STYLE: <link rel="stylesheet" type="text/css" href="myorg.css"/>
 
 ** 前回までのまとめや手書き資料
 
-   ネットで 'masayuki054 hatena 微分積分' で検索して，
-   「はてなダイアリー」というサイトの，
-   「masayuki054's diary」 のページを見つけてください。
+   - ネットで 'masayuki054 hatena 微分積分' で検索して，
 
-   どこかにある，「微分ゼミ -- 岩手大学 学修支援 2017」というページが
-   入口です。
+   - 「はてなダイアリー」というサイトの，
 
-    http://masayuki054.hatenablog.com/entry/2017/11/08/211556
+      「masayuki054's diary」 のページを見つけてください。
+
+   - *微分ゼミ -- 岩手大学 学修支援 2017* というページが入口です。
+
+   - URLは下記です:
+
+     - http://masayuki054.hatenablog.com/entry/2017/11/08/211556
 
 ** 逆関数とその微分
 *** 逆関数とその微分
 
 逆関数の意味について，下記ページを読んで，理解しましょう:
 
-逆関数の３つの定義と使い分け | 高校数学の美しい物語
-http://mathtrain.jp/inverse
+   - 逆関数の３つの定義と使い分け | 高校数学の美しい物語
+
+     http://mathtrain.jp/inverse
 
 逆関数の微分について，下記ページを読んで，理解しましょう:
 
-岩手大学理工学部 微分積分学 I (再履修)
-https://sites.google.com/s/0BwUWvGKIXA9PLUpfX2FtbGJxemM/p/0BwUWvGKIXA9Pcy1qYTBqZmtwVmc/edit
+   - 岩手大学理工学部 微分積分学 I (再履修)
 
+     https://sites.google.com/s/0BwUWvGKIXA9PLUpfX2FtbGJxemM/p/0BwUWvGKIXA9Pcy1qYTBqZmtwVmc/edit
 
 ** 合成関数の微分，対数微分法
 
 下記ページを読んで，微分法について，確認してください:
 
-微分公式一覧（基礎から発展まで） | 高校数学の美しい物語
-http://mathtrain.jp/bibunmatome
+   - 微分公式一覧（基礎から発展まで） | 高校数学の美しい物語
 
-   
-合成関数と対数微分法について，しっかり理解してください。
+     http://mathtrain.jp/bibunmatome
+
+     - 合成関数と対数微分法について，しっかり理解してください。
+
+     - 練習問題をやってみましょう。
+

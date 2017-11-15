@@ -11,6 +11,7 @@ ORGS = [
   "calc_semi_2.org",
   "calc_semi_3.org",
   "calc_semi_4.org",
+  "calc_semi_5.org",
   "contents.org",
   "sqrt10.org",
   "q_and_a.org",
