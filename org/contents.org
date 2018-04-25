@@ -21,26 +21,26 @@
    
 - [[file:./Figs/1変数関数の微分.pdf]]
 
-- file:./Figs/diff_semi_01.png
+- [[file:./Figs/diff_semi_01.png]]
 
 
 ** 2変数関数の微分とは
 
-- file:./Figs/2変数関数の微分.pdf
+- [[file:./Figs/2変数関数の微分.pdf]]
 
-- file:./Figs/diff_semi_02.png
+- [[file:./Figs/diff_semi_02.png]]
 
 ** 平均値の定理の意味
 
-- file:./Figs/平均値の定理に関する図.pdf
+- [[file:./Figs/平均値の定理に関する図.pdf]]
 
-- file:./Figs/diff_semi_03.png
+- [[file:./Figs/diff_semi_03.png]]
 
 ** 平均値の定理と関数の近似値
 
-- file:./Figs/平均値の定理と10の平方根の近似値.pdf
+- [[file:./Figs/平均値の定理と10の平方根の近似値.pdf]]
 
-- file:./sqrt10.org
+- [[file:./sqrt10.org]]
 
 
 
